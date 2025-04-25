@@ -95,7 +95,7 @@ Data Center SSD는 클라우드 서비스, 대용량 분석 시스템 등에서�
 - 뛰어난 전력 대비 성능 (IOPS/Watt)
 - TCO 절감에 초점
 - 다수의 Queue와 Command 병렬 처리 최적화
-- 
+  
 #### 🟢 Server SSD
 Server SSD는 엄밀히 따지면 제품 라인보다는 용도에 따른 분류에 가깝다. 실제로는 Enterprise SSD 또는 Data Center SSD 제품이 서버용으로 사용되며, 서버 환경에 최적화된 안정성, 연속 동작, 쓰기 내구성, IOPS 성능을 기준으로 선택된다. 서버 SSD는 웹 서버, 데이터베이스, 가상화 환경 등에서 빠른 응답성과 신뢰성이 중요한 시스템에 사용된다.
 
