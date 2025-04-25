@@ -1,6 +1,6 @@
-## 🖍️ SSD Overview
+## ✅ SSD Overview
 
-### 📄Agneda
+### 0. Agneda
 ---
 1. [HDD vs. SSD](#1-hdd-vs-ssd)
 2. [Product Line](#2-ssd-product-line)
