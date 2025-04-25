@@ -2,11 +2,11 @@
 
 ### 📄Agneda
 ---
-1. HDD vs. SSD
-2. Product Line
-3. Form-Factor
-4. Host Protocol
-5. Specificaiton
+1. [HDD vs. SSD](#1-hdd-vs-ssd)
+2. [Product Line](#2-ssd-product-line)
+3. [Form-Factor](#3-ssd-form-factor)
+4. [Host Protocol](#4-host-protocol)
+5. [Specification](#5-specification)
 
 ### 1. HDD vs SSD   
 ---
@@ -44,7 +44,7 @@ SSD는 반도체 칩(NAND Flash Memory)을 이용해 데이터를 저장하는 �
 
 결론적으로, 저장장치 시장은 현재 "성능은 SSD, 대용량 보관은 HDD"라는 역할 분담 구조로 재편되고 있다. SSD는 기술 발전과 가격 하락이라는 두 가지 요인을 바탕으로 시장을 빠르게 잠식하고 있으며, 앞으로도 HDD 대비 더 높은 채택률을 보일 것으로 예측된다. 특히 NVMe 기반 SSD는 데이터 중심 사회에서 고속 데이터 처리의 핵심 장치로 계속해서 중요성을 높여갈 것이다.
 
-### 2. SSD Product Line 정리
+### 2. SSD Product Line
 ---
 SSD(Solid State Drive)는 사용 목적과 환경에 따라 다양한 제품 라인(Product Line)으로 구분된다. 대표적으로 Client SSD, Enterprise SSD, Data Center SSD, Server SSD 등이 있으며, 각 제품군은 성능, 내구성, 신뢰성, 전력 효율성 등에서 상이한 특성을 갖는다.
 
@@ -127,8 +127,6 @@ E1.S(Short), E1.L(Long)은 새로운 데이터센터용 폼팩터로, 기존 U.2
 
 E3 시리즈는 E1보다 더 높은 전력과 발열을 감당할 수 있는 구조로 설계되었으며, **AI/ML 및 고성능 연산이 필요한 차세대 서버 환경**을 겨냥한다. 더 많은 전자부품을 탑재할 수 있어, 고성능 컨트롤러와 대용량 NAND 구성에 유리하다. E3.S는 1U 서버에, E3.L은 2U 서버에 적합하도록 만들어졌으며, 확장성과 효율성을 동시에 고려한 폼팩터다.
 
----
-
 #### 🔴 SATA vs NVMe: 인터페이스 기반 성능 비교
 
 SSD는 내부적으로 데이터를 저장하는 구조는 비슷하지만, **데이터가 시스템과 통신하는 방식인 인터페이스에 따라 성능이 크게 달라진다**. 가장 대표적인 인터페이스는 SATA와 NVMe이며, 이 두 방식은 속도, 지연시간, 명령 처리 방식 등에서 뚜렷한 차이를 가진다.
@@ -140,3 +138,11 @@ SATA(Serial ATA)는 원래 HDD를 위해 설계된 인터페이스로, 최대 �
 또한 지연시간(latency) 측면에서도 NVMe는 SATA보다 훨씬 빠르다. 예를 들어 SATA SSD의 대기 지연은 수십 마이크로초 수준이지만, NVMe SSD는 수 마이크로초 또는 그 이하로 동작할 수 있어, 체감 성능 차이가 크다.
 
 요약하자면, SATA는 가격과 범용성을, NVMe는 고속성과 효율성을 추구하는 방식이다. 가볍고 단순한 작업에는 SATA SSD도 충분하지만, 빠른 부팅, 고속 데이터 전송, 대용량 처리, AI 연산 등의 고성능 환경에서는 NVMe SSD가 명백한 우위를 가진다.
+
+### 4. Host Protocol   
+---
+test
+
+### 5. Specification
+---
+test
