@@ -1,6 +1,6 @@
 ## 🖍️ 01 SSD Overview
-
 ### 📄Agneda
+---
 1. HDD vs. SSD
 2. Product Line
 3. Form-Factor
@@ -8,6 +8,7 @@
 5. Specificaiton
 
 ### 1. HDD vs SSD   
+---
 <img src="assets/hdd and ssd img.png" width="550"/>
 
 | **HDD의 내부구조** | **SSD의 내부구조** |
@@ -41,3 +42,49 @@ SSD는 반도체 칩(NAND Flash Memory)을 이용해 데이터를 저장하는 �
 그렇다고 해서 HDD가 완전히 사라지는 것은 아니다. 여전히 HDD는 대용량 저장을 저렴한 비용으로 제공할 수 있다는 강점을 가지고 있으며, 백업 저장소, CCTV 저장 시스템, NAS(Network Attached Storage), 데이터 아카이빙 같은 용도로 꾸준히 활용되고 있다. 즉, 저장 공간의 경제성과 단순한 데이터 보존이 필요한 환경에서는 HDD의 역할이 여전히 유효하다.
 
 결론적으로, 저장장치 시장은 현재 "성능은 SSD, 대용량 보관은 HDD"라는 역할 분담 구조로 재편되고 있다. SSD는 기술 발전과 가격 하락이라는 두 가지 요인을 바탕으로 시장을 빠르게 잠식하고 있으며, 앞으로도 HDD 대비 더 높은 채택률을 보일 것으로 예측된다. 특히 NVMe 기반 SSD는 데이터 중심 사회에서 고속 데이터 처리의 핵심 장치로 계속해서 중요성을 높여갈 것이다.
+
+### 2. SSD Product Line 정리
+---
+SSD(Solid State Drive)는 사용 목적과 환경에 따라 다양한 제품 라인(Product Line)으로 구분된다. 대표적으로 Client SSD, Enterprise SSD, Data Center SSD, Server SSD 등이 있으며, 각 제품군은 성능, 내구성, 신뢰성, 전력 효율성 등에서 상이한 특성을 갖는다.
+
+#### 🟢 Client SSD
+Client SSD는 일반 소비자, 개인용 데스크탑이나 노트북 환경을 위한 제품군이다. 높은 가격 대비 성능, 저전력, 조용한 작동, 빠른 부팅 속도 등을 중시하며, 일상적인 데이터 저장과 읽기/쓰기 작업에 적합하다. 대부분 TLC(Triple Level Cell) 기반 NAND를 사용하며, 게임, 문서 작업, 콘텐츠 편집 등의 작업에 충분한 성능을 제공한다.
+##### 대표 제품 예시
+- Samsung 970 EVO Plus / 980 / 990
+- Western Digital WD Blue SN570 / SN850
+- Crucial P3 / P5 Plus
+- SK hynix Gold P31
+- Kingston NV2 / A2000
+##### 특징
+- 인터페이스: SATA 또는 NVMe (M.2 폼팩터)
+- 가격: GB당 낮은 비용
+- 수명: 중간 수준의 TBW
+- 보통 DRAM-less 구조도 많음 (저가형)
+#### 🟢 Enterprise SSD
+Enterprise SSD는 서버 및 워크스테이션과 같은 고신뢰성 환경을 위한 제품군이다. 높은 내구성, 장시간 지속되는 고부하 작업, 전력 장애 보호(PLP)와 같은 안정성 기능을 갖춘 것이 특징이다. 데이터센터나 고가용성 시스템에서는 데이터 손실이 치명적이므로, 이 제품군은 ECC, Wear-Leveling, Over-Provisioning 등 고급 기능을 포함한다.
+##### 대표 제품 예시
+- Samsung PM1733 / PM883 / SM883
+- Intel D7-P5520 / D5-P5316
+- Kioxia CM6 / PM6 Series
+- Micron 7400 Pro / 7450 Max
+- SK hynix PE8010 / PE8111
+##### 특징
+- 인터페이스: NVMe (U.2, E1.S, M.2 등), SAS, SATA
+- 수명: 높은 TBW / DWPD (최대 10 DWPD 이상)
+- 전력 장애 대응 회로 포함 (PLP)
+- 데이터 무결성과 안정성 최우선
+#### 🟢 Data Center SSD
+Data Center SSD는 클라우드 서비스, 대용량 분석 시스템 등에서의 사용을 고려한 SSD로, Enterprise SSD와 매우 유사한 특성을 갖는다. 그러나 상대적으로 **전력 효율성**과 **TCO(Total Cost of Ownership)** 최적화를 더 중시한다. 높은 IOPS 처리와 안정된 Throughput을 유지하면서도 대규모 시스템에서 효율적인 운영이 가능하도록 설계된다.
+##### 대표 제품 예시
+- Samsung PM9A3 / PM893
+- Intel D7-P5510 / D5-P5316
+- Micron 5400 / 7450 Pro
+- Solidigm D5-P5336
+- Kioxia CD6 / XD6 Series
+##### 특징
+- 인터페이스: NVMe, SATA, U.2, E1.S
+- 뛰어난 전력 대비 성능 (IOPS/Watt)
+- TCO 절감에 초점
+- 다수의 Queue와 Command 병렬 처리 최적화
+#### 🟢 Server SSD
+Server SSD는 엄밀히 따지면 제품 라인보다는 용도에 따른 분류에 가깝다. 실제로는 Enterprise SSD 또는 Data Center SSD 제품이 서버용으로 사용되며, 서버 환경에 최적화된 안정성, 연속 동작, 쓰기 내구성, IOPS 성능을 기준으로 선택된다. 서버 SSD는 웹 서버, 데이터베이스, 가상화 환경 등에서 빠른 응답성과 신뢰성이 중요한 시스템에 사용된다.
