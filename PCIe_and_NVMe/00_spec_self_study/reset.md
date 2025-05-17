@@ -1,6 +1,152 @@
 ## ✏️ Reset 내용 정리 ✏️
 
-### ✅ Reset의 종류
+### ▶️ Reset의 종류
+
+<img src="assets/reset.png" width="550"/>
+
+<br>
+
+### ✅ 1. Conventional Reset 
+
+🔸전통적인 의미의 Reset으로, Device 전체를 초기 상태로 되돌리는 리셋 방법
+
+🔸주로 전원이나 리셋 신호(PERST#)을 통해서 트리거 됨
+
+### ✅ 2. Fundamental Reset
+
+🔸Device 전체 를 전원 인가 직후 상태로 되돌리는 리셋 방식
+
+🔸전원 수준, 범위 등에 따라 Cold, Warm, Hot으로 나뉘어진다.
+
+### ✅ 3. Cold Reset
+
+#### 1) 개념
+
+🔸디바이스 전원을 껐다가 켜는 것과 동일한 효과를 주는 리셋 방식으로, 하드웨어 차원에서 디바이스를 완전히 초기화한다.
+
+🔸PCIe 장치는 전원 인가 후 초기 상태로 돌아가며 가장 **"강력한"** 리셋 방식이라고 생각할 수 있다.
+
+#### 2) Cold Reset 트리거 방식
+
+🔶 **하드웨어 기반 리셋**
+
+🔸**PERST# (PCIe Reset Pin)** 이 assert될 때 발생.
+
+> *PERST#는 Active Low 신호 (Low일 때 리셋 동작)*
+
+🔸전원 불안정 시 자동 발생하거나, 시스템이 의도적으로 트리거할 수도 있음.
+
+🔷 **시스템 레벨 전원 관리**
+
+🔹서버 전원 Off/On, 리셋 스위치 동작, **Power Cycling** 등으로도 발생.
+
+🔹**Platform Reset**이나 Power Good 신호에서도 발생 가능.
+
+#### 3) Cold Reset 동작 과정
+
+1️⃣ PERST#가 Assert됨 (Low Active)
+
+* 디바이스가 리셋 상태로 진입.
+
+* 내부 상태 머신, 레지스터, 메모리 등 모두 초기화.
+
+2️⃣ 디바이스가 전원 인가 직후 상태로 복귀
+
+* ROM에서 초기화 코드 로딩.
+
+* 기본 설정값으로 초기화 수행.
+
+3️⃣ Configuration Space 초기화
+
+* PCIe Config Space (Header Registers, Capability Registers 등) 초기화.
+
+4️⃣ Link Training 재시작
+
+* LTSSM (Link Training and Status State Machine) 동작.
+
+> *LTSSM : Physical Layer가 컨트롤하는 하드웨어 기반의 프로세스로, Link가 가질 수 있는 상태(State)를 다이어그램으로 나타낸 것*
+
+* Root Complex와 Endpoint가 Link Up 협상 수행.
+
+5️⃣ 정상 동작 상태로 복귀
+
+* L0 (Active State) 도달 후 정상 통신 가능.
+
+### ✅4. Warm Reset
+
+#### 1) 개념
+
+🔸**전원은 유지한 상태**에서 디바이스를 초기화하는 리셋 방식
+
+> *디바이스의 내부 논리 회로, 상태 머신 등을 초기화하지만 전원 공급은 계속됨*
+>
+> *전원을 끄지 않고도 리셋할 수 있다는 점에서 Cold Reset과 차이가 있음*
+
+🔸디바이스의 Configuration Space는 초기화되며, Link Training도 재진행
+
+> *Configuration Space : PCIe 디바이스의 속성, 제어 정보, 상태 정보를 저장하는 공간*
+>
+> *Link Training은 PCIe : Root Complex와 Endpoint가 데이터를 주고받기 전에 링크를 설정하는 과정*
+>
+>> *`Root Complex (RC)` : CPU와 메모리 시스템을 PCIe로 연결해주는 브리지로, PCIe 네트워크의 출발점을 의미함*
+>> 
+>> *`Endpoint (EP)` : Root Complex에 연결된 최종 PCIe 디바이스로, Root Complex랑 연결된 진짜 일하는 장치들을 의미함*
+
+#### 2) Warm Reset 트리거 방식
+
+🔶 **소프트웨어 제어 방식**
+
+🔸Root Complex가 소프트웨어적으로 리셋을 트리거.
+
+🔸Root Port나 Downstream Port에서 Warm Reset을 Initiate.
+
+🔷 **하드웨어는 유지**
+
+🔹전원은 끄지 않고, PERST#는 건드리지 않음.
+
+#### 3) Warm Reset 동작 과정
+
+1️⃣ Root Complex가 Warm Reset Initiate
+
+* 디바이스 리셋을 위해 내부 시퀀스 시작
+
+2️⃣ 디바이스 논리 회로 초기화
+
+* 내부 레지스터, 상태 머신 초기화.
+
+* 소프트웨어 컨트롤러가 해당 디바이스를 리셋.
+
+3️⃣ Configuration Space 초기화
+
+* PCIe Config Space (Header Registers, Capability Registers 등) 초기화.
+
+4️⃣ Link Training 재시작
+
+* LTSSM(Link Training Status State Machine) 재진입.
+
+* Root Complex와 Endpoint 간 Link 재협상.
+
+5️⃣ 정상 동작 상태로 복귀
+
+* L0 (Active State)로 진입 후 정상 운영.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 
 1. Controller Reset
 
