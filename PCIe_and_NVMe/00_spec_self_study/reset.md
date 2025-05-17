@@ -2,15 +2,23 @@
 
 ### 📜Agenda
 
-- [✅ 1. Conventional Reset](#-1-conventional-reset)
-- [✅ 2. Fundamental Reset](#-2-fundamental-reset)
-- [✅ 3. Cold Reset](#-3-cold-reset)
-- [✅ 4. Warm Reset](#-4-warm-reset)
-- [✅ 5. Hot Reset](#-5-hot-reset)
-- [✅ 6. Non-Fundamental Reset](#-6-non-fundamental-reset)
-- [✅ 7. Function Level Reset (FLR)](#-7-function-level-reset-flr)
-- [✅ 추가) NVMe Reset 이후 초기화 절차 및 Admin Queue 정리](#-추가-nvme-reset-이후-초기화-절차-및-admin-queue-정리)
-  <br>
+[▪️ 1. Conventional Reset](#-1-conventional-reset)
+
+[▪️ 2. Fundamental Reset](#-2-fundamental-reset)
+
+[▪️ 3. Cold Reset](#-3-cold-reset)
+
+[▪️ 4. Warm Reset](#-4-warm-reset)
+
+[▪️ 5. Hot Reset](#-5-hot-reset)
+
+[▪️ 6. Non-Fundamental Reset](#-6-non-fundamental-reset)
+
+[▪️ 7. Function Level Reset (FLR)](#-7-function-level-reset-flr)
+
+[▪️ 추가) NVMe Reset 이후 초기화 절차 및 Admin Queue 정리](#-추가-nvme-reset-이후-초기화-절차-및-admin-queue-정리)
+
+<br>
   
 ### ▶️ Reset의 종류
 
