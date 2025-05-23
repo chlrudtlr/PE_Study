@@ -34,7 +34,7 @@
 
 **1. 명령 생성 (Read/Write/Message)**
 
-CPU, NVMe, GPU 등은 메모리 주소에 접근하거나 다른 장치에 메시지를 보내야 할 때 PCIe Transaction Layer에서 TLP Type을 지정하여 TLP Header에 있는 Type 필드에 명시함
+- CPU, NVMe, GPU 등은 메모리 주소에 접근하거나 다른 장치에 메시지를 보내야 할 때 PCIe Transaction Layer에서 TLP Type을 지정하여 TLP Header에 있는 Type 필드에 명시함
 
 > **Type 종류**
 > 
@@ -52,7 +52,7 @@ CPU, NVMe, GPU 등은 메모리 주소에 접근하거나 다른 장치에 메�
 
 **2. 패킷(TLP) 생성**
 
-- **TLP(Transaction Layer Packet)의 구조**
+▪️ **TLP(Transaction Layer Packet)의 구조**
 
 <img src="assets/TLP.png" width="650"/>
 
