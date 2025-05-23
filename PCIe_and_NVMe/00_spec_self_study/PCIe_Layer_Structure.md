@@ -22,11 +22,11 @@
 
 ***"장치 간 명령과 데이터를 실은 패킷을 처음으로 만드는 계층"***
 
-🔹 PCIe 계층 구조의 최상위 계층
+- PCIe 계층 구조의 최상위 계층
 
-🔹 CPU, NVMe, GPU, 기타 PCIe Device들이 메모리 읽기/쓰기, IO, Message, Atomic 명령을 생성하는 계층
+- CPU, NVMe, GPU, 기타 PCIe Device들이 메모리 읽기/쓰기, IO, Message, Atomic 명령을 생성하는 계층
 
-🔹 실제 데이터를 포함한 'Transaction Layer Packet (TLP)'을 생성
+- 실제 데이터를 포함한 'Transaction Layer Packet (TLP)'을 생성
 
 > 이 계층에서 생성된 TLP는 Data Link Layer와 Physical Layer를 통해 전송됨
 
