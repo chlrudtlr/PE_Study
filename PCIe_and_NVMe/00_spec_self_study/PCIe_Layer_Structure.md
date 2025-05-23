@@ -81,6 +81,7 @@ Transaction Layer는 Header + Payload 형태의 TLP 패킷 생성
 > Read일 경우 요청만 (응답 시 Completion TLP로 데이터 전달)
 
 **3. 주소(Address) 관리** 
+
 Transaction Layer는 어디(Address)에 명령을 보내야 하는지 결정
 
 주소는 Memory Space, IO Space, Configuration Space, Message Space 등 구분
