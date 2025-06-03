@@ -182,7 +182,9 @@ SQ와 CQ는 **Circular Queue**의 구조(or Ring Buffer구)를 가지며 Head와
 
 *❗SQ와 CQ의 생성과 삭제는 Host Software의 요청에 의해서 이루어진다*
 
-**3. Queue의 생성과 소멸**
+*❗Queue가 몇 개의 명령을 처리할 수 있는지를 뜻하는 **Queue Depth**는 Queue가 Host OS에 의해 생성될 때 결정됨*
+
+**3. Queue의 동작 Flow**
 
 <img src="assets/queue_flow.png" width="800"/>
 
