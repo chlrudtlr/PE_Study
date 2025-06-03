@@ -1,10 +1,10 @@
 # 🌈Agenda
 
-🔸SSD System Architecture [Link](#-SSD-System-Architecture)
+🔸SSD System Architecture [[Link]](#-SSD-System-Architecture)
 
-🔸SSD Technology [Link](#-SSD-Technology)
+🔸SSD Technology [[Link]](#-SSD-Technology)
 
-🔸SSD Software Achitecture [Link](#-SSD-Software-Architecture)
+🔸SSD Software Achitecture [[Link]](#-SSD-Software-Architecture)
 
 </br>
 
@@ -162,9 +162,22 @@ SSD ↔ Channels ↔ Packages ↔ Dies ↔ Planes ↔ Blocks ↔ Pages
 
 ## 📘 SSD Technology
 
+To be continue,,,
+
+
+
+
+
+
+
+
+
+
+
+
 ## 📘 SSD Software Architecture
 
-
+To be continue,,,
 
 
 
