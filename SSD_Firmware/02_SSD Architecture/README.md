@@ -162,7 +162,7 @@ SSD ↔ Channels ↔ Packages ↔ Dies ↔ Planes ↔ Blocks ↔ Pages
 
 ▪️관리방 : 각 Queue는 doorbell register + head/tail 포인터로 관리됨
 
-
+<img src="assets/SQ_CQ_structure.png" width="550"/>
 
 
 
