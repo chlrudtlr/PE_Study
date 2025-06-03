@@ -26,9 +26,21 @@
 
 **✔️ 역할**
 
+1) Physical Interface가 하는 일 (NVMe와는 무관한, 순수한 PCIe 하드웨어 레벨의 일)
+
+- 전기적 신호의 수신/송신 (PCIe Gen4의 신호 처리)
+
+- CRC 검증, packet framing (Data Link Layer 이하)
+
+- Lane, Speed, LTSSM (Link Training State Machine) 제어
+
+2) Protocol Engine(NVMe)가 하는 일
+
 - Host(OS, CPU)에서 전송한 명령을 SSD Controller가 처리할 수 있는 구조체/데이터로 변환
 
 - Submission Queue와 Completion Queue를 관리(PCIe BAR에 있는 큐 메모리를 해석하고, SSD 내부에서 명령 대기열 처리)
+
+> [Submission Queue와 Completion Queue](#-Submission-Queue와-Completion-Queue)
 
 - 명령의 종류를 파악하고(READ/WRITE/TRIM 등), SSD 컨트롤러에 전달
 
@@ -135,3 +147,7 @@ SSD ↔ Channels ↔ Packages ↔ Dies ↔ Planes ↔ Blocks ↔ Pages
 - 갑작스러운 전원 차단 시 중요한 데이터 보호
 
 - 온도에 따라 SSD 성능 조절 (Thermal Throttling)
+
+
+
+### ✅ Submission Queue와 Completion Queue
