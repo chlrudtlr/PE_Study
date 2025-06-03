@@ -40,7 +40,7 @@
 
 - Submission Queue와 Completion Queue를 관리(PCIe BAR에 있는 큐 메모리를 해석하고, SSD 내부에서 명령 대기열 처리)
 
-> [Submission Queue와 Completion Queue](#-Submission-Queue와-Completion-Queue)
+> 클릭 → [*Submission Queue와 Completion Queue에 대해서 알아보자*](#-Submission-Queue와-Completion-Queue)
 
 - 명령의 종류를 파악하고(READ/WRITE/TRIM 등), SSD 컨트롤러에 전달
 
@@ -151,3 +151,37 @@ SSD ↔ Channels ↔ Packages ↔ Dies ↔ Planes ↔ Blocks ↔ Pages
 
 
 ### ✅ Submission Queue와 Completion Queue
+
+1. 개요
+
+▪️Submission Queue (SQ) : Host가 SSD에 보낼 명령(NVMe Command)을 저장하는 곳
+
+▪️Completion Queue (CQ) : SSD가 명령을 처리한 결과를 Host에 통보하는 곳
+
+▪️위치 및 접근 방법 : 모두 **Host Memory(RAM)**에 존재하며, SSD는 DMA로 접근
+
+▪️관리방 : 각 Queue는 doorbell register + head/tail 포인터로 관리됨
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
