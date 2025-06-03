@@ -1,10 +1,10 @@
-# Agenda
+# 🌈Agenda
 
-🔸[SSD System Architecture](#-SSD-System-Architecture)
+🔸SSD System Architecture [Link](#-SSD-System-Architecture)
 
-🔸[SSD Technology](#-SSD-Technology)
+🔸SSD Technology [Link](#-SSD-Technology)
 
-🔸[SSD Software Achitecture](#-SSD-Software-Architecture)
+🔸SSD Software Achitecture [Link](#-SSD-Software-Architecture)
 
 </br>
 
@@ -163,6 +163,26 @@ SSD ↔ Channels ↔ Packages ↔ Dies ↔ Planes ↔ Blocks ↔ Pages
 ## 📘 SSD Technology
 
 ## 📘 SSD Software Architecture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### ✅ Submission Queue와 Completion Queue
 
