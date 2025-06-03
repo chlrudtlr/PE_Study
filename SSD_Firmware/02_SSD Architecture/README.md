@@ -1,3 +1,13 @@
+# Agenda
+
+🔸[SSD System Architecture](#-SSD-System-Architecture)
+
+🔸[SSD Technology](#-SSD-Technology)
+
+🔸[SSD Software Achitecture](#-SSD-Software-Architecture)
+
+</br>
+
 ## 📘 SSD System Architecture
 
 ### ✅ 주요 구성 요소
@@ -150,7 +160,9 @@ SSD ↔ Channels ↔ Packages ↔ Dies ↔ Planes ↔ Blocks ↔ Pages
 
 - 온도에 따라 SSD 성능 조절 (Thermal Throttling)
 
+## 📘 SSD Technology
 
+## 📘 SSD Software Architecture
 
 ### ✅ Submission Queue와 Completion Queue
 
