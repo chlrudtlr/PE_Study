@@ -171,6 +171,8 @@ To be continue,,,
 
 <img src="assets/HIL_FTL_FIL.png" width="450"/>
 
+***‼️HIL, FTL, FIL은 SSD 컨트롤러 내부에서 Embedded CPU에 의해 실행되는 펌웨어 기능 블록이며, SSD의 핵심 논리 계층을 구성하는 소프트웨어***
+
 **1. HIL (Host Interface Layer)**
 
 ***"호스트 명령 해석 및 내부 요청 생성"***
